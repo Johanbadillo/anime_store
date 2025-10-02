@@ -45,6 +45,8 @@ En este proyecto consiste en hacer un script ejecutable e mongo para hacer las s
   - Mostrar el sku, name y tags de los productos que tienen calificación mayor a 4.5.
   - Mostrar sku, name, y price de los productos con stock menor a 5.
 
+---
+
 ### Realizar eliminacion tanto de propiedades de todos los documentos, como elementos de productos especificos, eliminacion de producto o que no tenga stock en nuestras tiendas.
 
   - Eliminar la propiedad available de todos los documentos.
@@ -53,12 +55,16 @@ En este proyecto consiste en hacer un script ejecutable e mongo para hacer las s
   - Eliminar el producto con sku: A043.
   - Eliminar todos los productos con stock igual a 0.
 
+---
+
 ### La implementacion de propiedades a todos los productos de la collecion.
 
 Lo agregado a los documentos de la coleccion debia ser lo siguiente
 
   - available: true
   - origin: "Importado"
+
+---
 
 #### Renombrar propiedades.
 
