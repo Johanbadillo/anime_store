@@ -273,7 +273,7 @@ db.products.updateOne(
     { "sku": "A018" },
     {
         $set: {
-            "provider": { "country": "Colombia" }
+            "provider": { "name": "ShueishaLatino","country": "Colombia" }
         }
     });
 
