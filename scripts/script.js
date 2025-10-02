@@ -1,7 +1,10 @@
+// Usamos o creamos la base de datos si no existe se crea si ya existe se usa
 USE anime_store;
 
 // En este punto se importo la data ya existente desde la interfaz de mongo Compass o 
 // se inserta con un insertMany 
+//Aqui como ingresamos directamente data se crea la collecion si no existe si ya existe se le añade
+//Aqui ingresamos toda la data que nos fue proporcionada por la Tienda Temática de Anime
 db.products.insertMany(
     [
         {
@@ -236,14 +239,8 @@ db.products.insertMany(
             "provider": { "name": "AnimePosters", "country": "EEUU" }
         }
     ]);
-
-// 
-
-
-
-
-
-
+/*
+1. Crear la base de datos anime_store y la colección products.*/
 //Aqui añadimos el producto que fue solicitado que añadamos
 db.products.insertOne([{
     "sku": "A101",
@@ -259,8 +256,11 @@ db.products.insertOne([{
         "country": "Japón"
     }
 }]);
+/*
+4. Realizar las siguientes actualizaciones: */
+//Aqui comenzamos con las actualizacion y Agregacion de datos que fueron solicitadas
 
-//Aqui comenzamos con las actualizaciones que fueron solicitadas
+//Aqui actualizamos el stock para que pasara de 10 a 15 del sku A034
 db.products.updateOne(
     { "sku": "A034" },
     {
@@ -269,6 +269,7 @@ db.products.updateOne(
         }
     });
 
+//Aqui cambiamos el country del provider a "Colombia" del sku A018
 db.products.updateOne(
     { "sku": "A018" },
     {
@@ -277,6 +278,7 @@ db.products.updateOne(
         }
     });
 
+// Aqui dos nuevos tags que estos fueron "nuevo" y "popular" al sku A012
 db.products.updateOne(
     { "sku": "A012" },
     {
@@ -287,16 +289,18 @@ db.products.updateOne(
         }
     });
 
+//Aqui le añadimosdos nuevos tags que son "descuento" y "outlet" al sku A025
 db.products.updateOne(
     { sku: "A025" },
     {
         $push: {
             tags: {
-                $each: ["nuevo", "popular"]
+                $each: ["descuento", "outlet"]
             }
         }
     });
 
+// Aqui cambiamos el price a 45000 del producto llamado "Camiseta Goku Ultra Instinct"
 db.products.updateOne(
     { "name": "Camiseta Goku Ultra Instinct" },
     {
@@ -305,7 +309,8 @@ db.products.updateOne(
         }
     });
 
-
+/*
+7. Crear las siguientes consultas: */
 //En este punto hacemos las consultas que nos fueron solicitadas
 db.products.find({ category: { $eq: "Mangas" } });
 
@@ -323,7 +328,12 @@ db.products.aggregate([
     { $group: { _id: "$sku", name: { $first: "$name"}, price: { $first: "$price"},stock: { $first: "$stock"} } }
 ]);
 
+
+
 //En este punto presentamos las eliminaciones que fueron solicitados
+
+//11. Eliminar el producto con sku: A043.
 db.products.deleteOne({sku:A043});
 
+//12. Eliminar todos los productos con stock igual a 0.
 db.products.deleteMany({stock:0});
