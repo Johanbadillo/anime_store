@@ -1,4 +1,4 @@
-# Anime Store
+# Anime Store - Tienda Temática de Anime
 
 ## FILTRO MONGO
 
@@ -25,7 +25,7 @@ En este proyecto consiste en hacer un script ejecutable e mongo para hacer las s
 ```
 ---
 
-### Realizar diferentes actualizaciones en la base de datos y estas actualizaciones fueron las siguientes.
+## Realizar diferentes actualizaciones en la base de datos y estas actualizaciones fueron las siguientes.
 
   - Producto con sku: A034, actualizar stock a 15.
 
@@ -35,9 +35,14 @@ En este proyecto consiste en hacer un script ejecutable e mongo para hacer las s
   - Producto con sku: A025, agregar los tags "descuento", "outlet".
   - Producto llamado "Camiseta Goku Ultra Instinct", cambiar el price a 45000.
 
+
+### Importante
+
+Aqui el producto A059 no se le pudo actualizar porque no existia ningun archivo son ese indentificador al cual hacerle la actualizacion 
+
 ---
 
-### Crear y realizar consultas que fueron propuestas sobre los datos pedidos.
+## Crear y realizar consultas que fueron propuestas sobre los datos pedidos.
 
   - Mostrar los productos de la categoría "Mangas"
   - Mostrar los productos que tienen un precio mayor a 50000
@@ -47,7 +52,7 @@ En este proyecto consiste en hacer un script ejecutable e mongo para hacer las s
 
 ---
 
-### Realizar eliminacion tanto de propiedades de todos los documentos, como elementos de productos especificos, eliminacion de producto o que no tenga stock en nuestras tiendas.
+## Realizar eliminacion tanto de propiedades de todos los documentos, como elementos de productos especificos, eliminacion de producto o que no tenga stock en nuestras tiendas.
 
   - Eliminar la propiedad available de todos los documentos.
   - Eliminar el tag "descuento" del producto con sku: A025.
@@ -57,7 +62,7 @@ En este proyecto consiste en hacer un script ejecutable e mongo para hacer las s
 
 ---
 
-### La implementacion de propiedades a todos los productos de la collecion.
+## La implementacion de propiedades a todos los productos de la collecion.
 
 Lo agregado a los documentos de la coleccion debia ser lo siguiente
 
@@ -66,7 +71,7 @@ Lo agregado a los documentos de la coleccion debia ser lo siguiente
 
 ---
 
-#### Renombrar propiedades.
+## Renombrar propiedades.
 
 Se fue solicitado tambien el renombrar la propiedad de origin por la de import_type, y cambiar el import_type a "Nacional" para los productos cuyo proveedor esté en Colombia.
 
