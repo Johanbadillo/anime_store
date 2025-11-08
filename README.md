@@ -22,7 +22,7 @@ Implementar un **script ejecutable en MongoDB** que permita:
 ## 🗂️ Estructura del Proyecto
 ```
 📁 anime_store/
-├── script.js           # Script principal en MongoDB
+├── scripts/             # Script principal en MongoDB
 ├── data/               # Datos de ejemplo (opcional)
 ├── README.md           # Este archivo
 └── LICENSE             # Licencia MIT
@@ -104,3 +104,25 @@ Implementar un **script ejecutable en MongoDB** que permita:
 
 ---
 
+# 🚀 Cómo Ejecutar el Script
+
+## Pasos para Ejecutar
+
+| Paso | Acción |
+|------|--------|
+| **1** | Asegúrate de tener **MongoDB** instalado y en ejecución.<br>Verifica con: `mongod --version` |
+| **2** | Abre la terminal del **MongoDB Shell**:<br>`mongosh` |
+| **4** | Entra al script.js para cada ejecucion deseada:<br> |
+| **5** | ¡Listo! Observa la salida en consola con todos los resultados. |
+
+> El script incluye **comentarios detallados** en cada operación para facilitar el seguimiento.
+
+---
+
+# 🛠️ Tecnologías Usadas
+
+| Tecnología     | Uso                              |
+|----------------|----------------------------------|
+| **MongoDB**         | Base de datos NoSQL para almacenar productos de anime           |
+| **JavaScript**      | Lógica del script: inserciones, actualizaciones, consultas y eliminaciones              |
+| **Mongo Shell**     | Entorno de ejecución interactivo para comandos MongoDB          |
