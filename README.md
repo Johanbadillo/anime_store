@@ -20,3 +20,32 @@ Implementar un **script ejecutable en MongoDB** que permita:
 ---
 
 ## 🗂️ Estructura del Proyecto
+```
+📁 anime_store/
+├── script.js           # Script principal en MongoDB
+├── data/               # Datos de ejemplo (opcional)
+├── README.md           # Este archivo
+└── LICENSE             # Licencia MIT
+```
+
+
+---
+
+## 📦 Datos de Ejemplo (Producto Insertado)
+
+```json
+{
+  "sku": "A101",
+  "name": "Figura Naruto Uzumaki",
+  "category": "Figuras",
+  "price": 120000,
+  "stock": 10,
+  "anime": "Naruto",
+  "rating": 4.8,
+  "tags": ["coleccionable", "resina", "edición especial"],
+  "provider": {
+    "name": "OtakuDistribuciones",
+    "country": "Japón"
+  }
+}
+```
